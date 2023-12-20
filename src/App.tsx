@@ -1,6 +1,4 @@
-
 function App() {
-
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="flex flex-col gap-4 w-52">
@@ -16,8 +14,9 @@ function App() {
         <div className="skeleton min-h-4 max-w-28"></div>
         <div className="skeleton min-h-4 min-w-full"></div>
         <div className="skeleton min-h-4 min-w-full"></div>
-        <p className="capitalize font-thin text-xs text-primary">under development</p>
-        
+        <p className="capitalize font-thin text-xs text-primary">
+          under development
+        </p>
       </div>
     </div>
   );
