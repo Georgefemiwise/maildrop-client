@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <div className="flex lg:flex-row flex-col gap-3 p-3 justify-center items-center h-screen">
+      <div className="flex lg:flex-row flex-col gap-3 p-24 justify-center items-center h-screen">
         <div className="card w-full bg-neutral text-neutral-content">
           <div className="card-body items-center text-center">
             <h2 className="card-title">Grand total student Programs</h2>

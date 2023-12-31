@@ -6,8 +6,8 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
+  LabelList,
 } from "recharts";
 
 interface Student {
@@ -56,12 +56,14 @@ const StudentChart: React.FC<StudentChartProps> = ({ studentData=[] }) => {
         data={chartData}
         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
+        <CartesianGrid strokeDasharray="3 3" vertical={false} />
         <XAxis dataKey="program" />
         <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="count" fill="#8884d8" />
+        <Tooltip cursor={{fill:'transparent'}}/>
+        {/* <Legend /> */}
+        <Bar dataKey="count" fill="#8884d8" radius={5} >
+          <LabelList  dataKey='count' position='top'/>
+        </Bar>
       </BarChart>
     </ResponsiveContainer>
   );
