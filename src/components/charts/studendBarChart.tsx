@@ -8,28 +8,17 @@ import {
   Tooltip,
   ResponsiveContainer,
   LabelList,
+  Legend,
 } from "recharts";
 
-interface Student {
-  id: any;
-  index: string;
-  academic_year: string;
-  program: string;
-  email: string;
-  course: string;
-  graduation_year: string;
-}
 
-interface ChartData {
-  program: string;
-  count: number;
-}
-
-interface StudentChartProps {
+interface StudentBarChartProps {
   studentData?: Student[];
 }
 
-const StudentChart: React.FC<StudentChartProps> = ({ studentData=[] }) => {
+const StudentBarChart: React.FC<StudentBarChartProps> = ({
+  studentData = [],
+}) => {
   // Ensure studentData is defined before proceeding
   if (!studentData) {
     return null; // Or display a loading indicator or an appropriate message
@@ -56,17 +45,17 @@ const StudentChart: React.FC<StudentChartProps> = ({ studentData=[] }) => {
         data={chartData}
         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
       >
-        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+        <CartesianGrid strokeDasharray="2" vertical={false} />
         <XAxis dataKey="program" />
         <YAxis />
-        <Tooltip cursor={{fill:'transparent'}}/>
-        {/* <Legend /> */}
-        <Bar dataKey="count" fill="#8884d8" radius={5} >
-          <LabelList  dataKey='count' position='top'/>
+        <Tooltip cursor={{ fill: "transparent" }} />
+        <Legend />
+        <Bar dataKey="count" fill="#8884d8" radius={5}>
+          <LabelList dataKey="count" position="top" />
         </Bar>
       </BarChart>
     </ResponsiveContainer>
   );
 };
 
-export default StudentChart;
+export default StudentBarChart;
