@@ -23,12 +23,12 @@ function App() {
             <StudentLineChart studentData={data} />
           </div>
         </div>
-        <div className="card w-full bg-neutral h-[500px] skeleton text-neutral-content">
+        {/* <div className="card w-full bg-neutral h-[500px] skeleton text-neutral-content">
           <div className="card-body items-center text-center">
             <h2 className="card-title"></h2>
             <p></p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
